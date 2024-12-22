@@ -8,7 +8,7 @@ import { title } from "@/components/primitives";
 
 export default function WhitelistPage() {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center w-full">
       <div className="flex flex-row mb-5">
         <h1 className={title()}>Get Whitelisted Today!</h1>
       </div>
