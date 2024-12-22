@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .Box-Shadow {
+      @apply
+      border-4
+      border-solid
+      border-l-green-500
+      border-l-8
+      shadow-2xl;
+      padding: 10px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      background-color: rgb(219, 219, 219);
+      box-shadow: 10px;
+    }
+  }
