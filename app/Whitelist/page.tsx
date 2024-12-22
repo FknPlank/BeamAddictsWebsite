@@ -5,10 +5,11 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { title } from "@/components/primitives";
+import { siteConfig } from "@/config/site";
 
 export default function WhitelistPage() {
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="justify-center flex-auto">
       <div className="flex flex-row mb-5">
         <h1 className={title()}>Get Whitelisted Today!</h1>
       </div>
@@ -51,7 +52,7 @@ export default function WhitelistPage() {
             Join the discord to get more info on whitelisting!
             <div className="flex flex-row my-4 justify-center">
               <a
-                href="https://discord.gg/WfJywRExFm"
+                href={siteConfig.links.discord}
                 rel="noopener noreferrer"
                 target="_blank"
               >
