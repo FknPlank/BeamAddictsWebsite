@@ -12,9 +12,10 @@ import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 
+import { hanuman } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, DiscordIcon, SearchIcon, Logo } from "@/components/icons";
+import { GithubIcon, DiscordIcon, SearchIcon } from "@/components/icons";
 
 export const Navbar = () => {
   const searchInput = (
@@ -39,15 +40,18 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar isBordered maxWidth="2xl" position="sticky" className="drop-shadow-md">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">Beam Addict&apos;s</p>
+
+          <p className={`${hanuman.className} font-bold text-2xl`}>
+        <span className="text-inherit">Beam</span>
+        <span className="text-indigo-700">Addicts</span>
+          </p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-8 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink

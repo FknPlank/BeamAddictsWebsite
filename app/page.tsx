@@ -1,25 +1,36 @@
-"use client"
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-import {Image} from "@nextui-org/react";
+"use client";
+import HeroSection from "@/components/hero";
+import { Roboto } from "next/font/google";
+import { Button } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
+import { UserIcon, DiscordIcon, DiscordIcon2, ListIcon, EventIcon } from "@/components/icons";
+import { roboto } from "@/config/fonts";
 
 export default function Home() {
   return (
-    <div className="flex justify-center">
-    <Image 
-      isBlurred
-      alt="NextUI Album Cover"
-      className="m-5"
-      src="https://nextui.org/images/album-cover.png"
-      height={250}
-      width={600}
-    />
-    </div>
+    <>
+      <>
+        <div className="h-[20rem] sm:h-[25rem] md:h-[30rem] bg-gray-200">
+          <HeroSection />
+        </div>
+      </>
+      <>
+        <div className="flex justify-center gap-10 py-10">
+          <Button startContent={<ListIcon />} variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+            Whitelist Information
+          </Button>
+          <Button startContent={<DiscordIcon2 />} variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+            Join The Discord
+          </Button>
+          <Button startContent={<EventIcon />}  variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+            Events
+          </Button>
+          <Button startContent={<UserIcon />} variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+            About Us
+          </Button>
+
+        </div>
+      </>
+    </>
   );
 }
