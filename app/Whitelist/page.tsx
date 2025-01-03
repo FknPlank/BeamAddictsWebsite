@@ -4,11 +4,14 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 import { title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
+import { ListIcon, RulesIcon, SkinIcon } from "@/components/icons";
 
 export default function WhitelistPage() {
   return (
+    
     <div className="justify-center flex-auto">
       <div className="flex flex-row mb-5">
         <h1 className={title()}>Get Whitelisted Today!</h1>
@@ -20,6 +23,7 @@ export default function WhitelistPage() {
             aria-label="What are the rules?"
             className="mb-2"
             title="What are the rules?"
+            startContent={<RulesIcon />}
           >
             <ul className="list-disc list-inside text-left">
               <li className="mb-2">
@@ -48,6 +52,7 @@ export default function WhitelistPage() {
             aria-label="How do I get whitelisted?"
             className="mb-2"
             title="How do I get whitelisted?"
+            startContent={<ListIcon />}
           >
             Join the discord to get more info on whitelisting!
             <div className="flex flex-row my-4 justify-center">
@@ -69,6 +74,7 @@ export default function WhitelistPage() {
             aria-label="Can I add my custom skins?"
             className="mb-2"
             title="Can I add my custom skins?"
+            startContent={<SkinIcon />}
           >
             Yes! You can add pre-made skins, or commission our staff to make one
             for you!.

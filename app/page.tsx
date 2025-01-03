@@ -15,17 +15,17 @@ export default function Home() {
         </div>
       </>
       <>
-        <div className="flex justify-center gap-10 py-10">
-          <Button startContent={<ListIcon />} variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+        <div className="flex justify-center gap-20 py-20">
+          <Button startContent={<ListIcon />} variant="bordered" className={`${roboto.className} size-80 h-20 text-2xl text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
             Whitelist Information
           </Button>
-          <Button startContent={<DiscordIcon2 />} variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+          <Button startContent={<DiscordIcon2 />} variant="bordered" className={`${roboto.className} size-80 h-20 text-2xl text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
             Join The Discord
           </Button>
-          <Button startContent={<EventIcon />}  variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+          <Button startContent={<EventIcon />}  variant="bordered" className={`${roboto.className} size-80 h-20 text-2xl text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
             Events
           </Button>
-          <Button startContent={<UserIcon />} variant="bordered" className={`${roboto.className} size-56 text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
+          <Button startContent={<UserIcon />} variant="bordered" className={`${roboto.className} size-80 h-20 text-2xl text-black-600 border-indigo-700 shadow-lg shadow-indigo-700/60`}>
             About Us
           </Button>
 
