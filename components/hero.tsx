@@ -1,4 +1,5 @@
 import { Button } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 import { anton, roboto } from "@/config/fonts";
 import {
@@ -7,8 +8,11 @@ import {
   ListIcon,
   UserIcon,
 } from "@/components/icons";
+import { siteConfig } from "@/config/site";
 
 export default function HeroSection() {
+  const router = useRouter();
+
   return (
     <div
       className="relative bg-cover bg-center w-screen h-full py-50 drop-shadow-xl"
@@ -20,16 +24,19 @@ export default function HeroSection() {
         className={`${anton.className}relative z-10 flex flex-col items-center justify-center h-full text-center text-white`}
       >
         <p className="font-bold font-chonburi">
-          <span className="text-inherit text-5xl">Welcome to </span>
-          <span className="text-inherit text-5xl">Beam</span>
-          <span className="text-indigo-700 text-5xl">Addicts</span>
-          <span className="text-inherit text-5xl"> Gaming!</span>
+          <span className="text-inherit text-8xl">Welcome to </span>
+          <span className="text-inherit text-8xl">Beam</span>
+          <span className="text-indigo-700 text-8xl">Addicts</span>
+          <span className="text-inherit text-8xl"> Gaming!</span>
         </p>
         <div className="flex justify-center gap-20 py-20">
           <Button
             className={`${roboto.className} size-80 h-14 text-2xl bg-indigo-700 text-white`}
             startContent={<ListIcon />}
             variant="solid"
+            onPress={() => {
+              router.push("/Whitelist");
+            }}
           >
             Whitelist Information
           </Button>
@@ -38,7 +45,9 @@ export default function HeroSection() {
             startContent={<DiscordIcon2 />}
             variant="solid"
           >
-            Join The Discord
+            <a href={siteConfig.links.discord} rel="noreferrer" target="_blank">
+              Join The Discord
+            </a>
           </Button>
           <Button
             className={`${roboto.className} size-80 h-14 text-2xl bg-indigo-700 text-white`}
